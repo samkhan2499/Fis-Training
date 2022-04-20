@@ -146,3 +146,13 @@ WHEN TOTAL >=70 AND TOTAL<100 THEN 'THIRD CLASS'
 ELSE 'FAIL'
 END
 FROM RESULTS;
+
+INDEXES
+------------------
+1. create table students(studentid int, firstname varchar(20), lastname varchar(20), class varchar(5));
+2. Enter data in table
+3. SELECT studentid, firstname, lastname FROM students WHERE class = 'CS';
+4. EXPLAIN SELECT studentid, firstname, lastname FROM students WHERE class = 'CS';
+5. CREATE INDEX class ON students (class);
+6. EXPLAIN SELECT studentid, firstname, lastname FROM students WHERE class = 'CS';
+7. SHOW INDEXES FROM students;
