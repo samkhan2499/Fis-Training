@@ -167,13 +167,13 @@ create table data( id int, a varchar(255), b varchar(255), c varchar(255));
 2 | a1 | b1 | c1
 
 1.  select id, 'a' col, a value
-    from data
+    from students
     union all
     select id, 'b' col, b value
-    from data
+    from students
     union all
     select id, 'c' col, c value
-    from data;
+    from students;
 
 
 2.  select t.id,
@@ -183,7 +183,7 @@ create table data( id int, a varchar(255), b varchar(255), c varchar(255));
     when 'b' then b
     when 'c' then c
     end as data
-    from data t
+    from students t
     cross join
     (
     select 'a' as col
